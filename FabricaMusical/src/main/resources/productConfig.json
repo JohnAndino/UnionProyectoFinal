@@ -1,0 +1,34 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Guitarra Acústica",
+      "material": "Madera",
+      "price": 150.0,
+      "stepsOfFabrication": {
+        "COMPRAR_MATERIALES": 1,
+        "CORTAR": 2,
+        "ENSAMBLAJE_DE_COMPONENTES": 3,
+        "PINTURA": 5,
+        "AFINACION": 6,
+        "PRUEBAS_DE_SONIDO": 2
+      }
+    },
+    {
+      "id": 2,
+      "name": "Saxofón",
+      "material": "Metal",
+      "price": 300.0,
+      "stepsOfFabrication": {
+        "COMPRAR_MATERIALES": 1,
+        "CORTAR": 2,
+        "ENSAMBLAJE_DE_COMPONENTES": 5,
+        "LIJADO": 4,
+        "PINTURA": 1,
+        "AFINACION": 2,
+        "PRUEBAS_DE_SONIDO": 2,
+        "EMPAQUETADO": 1
+      }
+    }
+  ]
+}
