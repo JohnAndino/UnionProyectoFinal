@@ -1,8 +1,11 @@
 package ec.edu.uce.FabricaMusical.controller;
 
+import ec.edu.uce.FabricaMusical.models.Cliente;
 import ec.edu.uce.FabricaMusical.models.Product;
+import ec.edu.uce.FabricaMusical.models.implementacion.ClienteImp;
 import ec.edu.uce.FabricaMusical.models.interfaces.Notify;
 import ec.edu.uce.FabricaMusical.models.enums.Steps;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,6 +16,16 @@ import java.util.TimerTask;
 public class Container {
     private List<Product> products;
     private Notify notificationService;
+
+    @Autowired
+    ClienteImp clienteImp;
+
+    public void registrarCliente(String name, String password) {
+        Cliente cliente = new Cliente();
+        cliente.setName(name);
+        cliente.setPassword(password);
+        clienteImp.saveCliente(cliente);
+    }
 
     public Container(Notify notificationService) {
         this.products = new ArrayList<>();
@@ -57,6 +70,8 @@ public class Container {
             }
         }
     }
+
+
 
     public List<Product> getProducts() {
         return products;
