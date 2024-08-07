@@ -56,12 +56,11 @@ public class Login extends JFrame {
         setPreferredSize(new Dimension(1400, 800));
         setUndecorated(true);
 
-        // Create a custom title bar
         titleBar = new JPanel();
         titleBar.setBackground(Color.BLACK);
         titleBar.setLayout(new BorderLayout());
 
-        JLabel titleLabel = new JLabel("Login");
+        JLabel titleLabel = new JLabel("");
         titleLabel.setForeground(Color.WHITE);
         titleBar.add(titleLabel, BorderLayout.WEST);
 
@@ -132,7 +131,6 @@ public class Login extends JFrame {
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.insets = new Insets(10, 10, 10, 10);
 
-        // Title label
         jLabel1.setFont(new Font("TIMES NEW ROMAN", Font.BOLD, 36));
         jLabel1.setHorizontalAlignment(SwingConstants.CENTER);
         jLabel1.setText("INGRESE EN SU CUENTA O REGÍSTRESE:");
@@ -142,7 +140,6 @@ public class Login extends JFrame {
         gbc.gridwidth = 2;
         mainPanel.add(jLabel1, gbc);
 
-        // User label and text field
         jLabel4.setFont(new Font("TIMES NEW ROMAN", Font.BOLD, 18));
         jLabel4.setText("NOMBRE:");
         jLabel4.setForeground(Color.WHITE);
@@ -156,7 +153,6 @@ public class Login extends JFrame {
         gbc.gridy = 1;
         mainPanel.add(jTextField1, gbc);
 
-        // Password label and password field
         jLabel2.setFont(new Font("TIMES NEW ROMAN", Font.BOLD, 18));
         jLabel2.setText("CONTRASEÑA:");
         jLabel2.setForeground(Color.WHITE);
@@ -169,7 +165,6 @@ public class Login extends JFrame {
         gbc.gridy = 2;
         mainPanel.add(jPasswordField1, gbc);
 
-        // Buttons
         Border buttonBorder = BorderFactory.createLineBorder(new Color(246,195,67), 2);
 
         jButtonRegis.setFont(new Font("TIMES NEW ROMAN", Font.BOLD, 14));
@@ -232,7 +227,6 @@ public class Login extends JFrame {
             dispose();
         });
 
-        // Add buttons to the main panel
         gbc.gridx = 0;
         gbc.gridy = 4;
         gbc.gridwidth = 1;
@@ -246,7 +240,6 @@ public class Login extends JFrame {
         gbc.gridy = 4;
         mainPanel.add(jButtonRegr, gbc);
 
-        // Add the title bar and main panel to the frame
         add(titleBar, BorderLayout.NORTH);
         add(mainPanel, BorderLayout.CENTER);
 
@@ -255,7 +248,6 @@ public class Login extends JFrame {
     }
 
     private boolean authenticate(String username, String password) {
-        // La autenticación real no está implementada; siempre devuelve verdadero.
         return true;
     }
 }

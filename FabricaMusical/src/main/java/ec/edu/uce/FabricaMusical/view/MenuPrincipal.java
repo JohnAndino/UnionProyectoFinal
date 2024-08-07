@@ -36,8 +36,8 @@ public class MenuPrincipal extends JFrame {
         jButtonUser = new JButton();
 
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new Dimension(1400, 800));  // Adjusted size
-        setUndecorated(true);  // Remove default title bar
+        setPreferredSize(new Dimension(1400, 800));
+        setUndecorated(true);
         setTitle("");
 
         // Create a custom title bar
@@ -45,7 +45,7 @@ public class MenuPrincipal extends JFrame {
         titleBar.setBackground(Color.BLACK);
         titleBar.setLayout(new BorderLayout());
 
-        JLabel titleLabel = new JLabel("Menu Principal");
+        JLabel titleLabel = new JLabel("");
         titleLabel.setForeground(Color.WHITE);
         titleBar.add(titleLabel, BorderLayout.WEST);
 
@@ -116,24 +116,22 @@ public class MenuPrincipal extends JFrame {
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.insets = new Insets(10, 10, 10, 10);
 
-        // Add the greeting label
         JLabel greetingLabel = new JLabel("Saludos, seleccione por favor:");
         greetingLabel.setForeground(Color.WHITE);
-        greetingLabel.setFont(new Font("TIMES NEW ROMAN", Font.BOLD, 30)); // Aumentar el tamaño del texto
+        greetingLabel.setFont(new Font("TIMES NEW ROMAN", Font.BOLD, 30));
         gbc.gridx = 0;
         gbc.gridy = 0;
-        gbc.gridwidth = 2; // Span across two columns
+        gbc.gridwidth = 2;
         mainPanel.add(greetingLabel, gbc);
 
-        Dimension buttonSize = new Dimension(200, 200); // Ajustar el tamaño del botón
+        Dimension buttonSize = new Dimension(200, 200);
         jButtonAdmin.setPreferredSize(buttonSize);
         jButtonUser.setPreferredSize(buttonSize);
 
-        styleButton(jButtonAdmin, "/images/admin.png"); // Agrega imagen para el botón Admin
-        styleButton(jButtonUser, "/images/user.jpg"); // Agrega imagen para el botón Usuario
+        styleButton(jButtonAdmin, "/images/admin.png");
+        styleButton(jButtonUser, "/images/user.jpg");
 
-        // Add buttons to the main panel
-        gbc.gridwidth = 1; // Reset to one column span
+        gbc.gridwidth = 1;
         gbc.gridx = 0;
         gbc.gridy = 1;
         mainPanel.add(jButtonAdmin, gbc);
@@ -145,7 +143,7 @@ public class MenuPrincipal extends JFrame {
         jButtonAdmin.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 Login login = context.getBean(Login.class);
-                login.setUserType("admin"); // Establece el tipo de usuario como "admin"
+                login.setUserType("admin");
                 login.setSize(getSize());
                 login.setLocationRelativeTo(null);
                 login.setVisible(true);
@@ -156,7 +154,7 @@ public class MenuPrincipal extends JFrame {
         jButtonUser.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 Login login = context.getBean(Login.class);
-                login.setUserType("client"); // Establece el tipo de usuario como "client"
+                login.setUserType("client");
                 login.setSize(getSize());
                 login.setLocationRelativeTo(null);
                 login.setVisible(true);
@@ -164,13 +162,11 @@ public class MenuPrincipal extends JFrame {
             }
         });
 
-        // Add the title bar and main panel to the frame
         add(titleBar, BorderLayout.NORTH);
         add(mainPanel, BorderLayout.CENTER);
         pack();
-        setLocationRelativeTo(null); // Center the frame
+        setLocationRelativeTo(null);
 
-        // Set the JFrame background color to black
         getContentPane().setBackground(Color.BLACK);
     }
 
@@ -181,7 +177,7 @@ public class MenuPrincipal extends JFrame {
         button.setFocusPainted(false);
         try {
             Image img = ImageIO.read(getClass().getResource(imagePath));
-            Image scaledImg = img.getScaledInstance(200, 200, Image.SCALE_SMOOTH); // Cambia el tamaño
+            Image scaledImg = img.getScaledInstance(200, 200, Image.SCALE_SMOOTH);
             button.setIcon(new ImageIcon(scaledImg));
         } catch (IOException e) {
             e.printStackTrace();

@@ -7,11 +7,18 @@
       "price": 150.0,
       "stepsOfFabrication": {
         "COMPRAR_MATERIALES": 1,
-        "CORTAR": 2,
-        "ENSAMBLAJE_DE_COMPONENTES": 3,
-        "PINTURA": 5,
-        "AFINACION": 6,
-        "PRUEBAS_DE_SONIDO": 2
+        "INSPECCION_DE_CALIDAD_MATERIALES": 2,
+        "CORTAR": 3,
+        "TALLAR": 4,
+        "LIJADO": 5,
+        "PINTAR": 6,
+        "BARNIZADO": 7,
+        "SECADO": 8,
+        "ENSAMBLAJE_DE_COMPONENTES": 9,
+        "INSTALACION_DE_CUERDAS": 10,
+        "AFINACION": 11,
+        "PRUEBAS_DE_SONIDO": 12,
+        "EMPAQUETADO_Y_ETIQUETADO": 13
       }
     },
     {
@@ -21,14 +28,119 @@
       "price": 300.0,
       "stepsOfFabrication": {
         "COMPRAR_MATERIALES": 1,
-        "CORTAR": 2,
-        "ENSAMBLAJE_DE_COMPONENTES": 5,
+        "INSPECCION_DE_CALIDAD_MATERIALES": 2,
+        "CORTAR": 3,
+        "MOLDEAR_FORMA": 4,
+        "LIJADO": 5,
+        "PULIDO": 6,
+        "PINTAR": 7,
+        "SECADO": 8,
+        "ENSAMBLAJE_DE_COMPONENTES": 9,
+        "AFINACION": 10,
+        "PRUEBAS_DE_SONIDO": 11,
+        "EMPAQUETADO_Y_ETIQUETADO": 12
+      }
+    },
+    {
+      "id": 3,
+      "name": "Piano",
+      "material": "Madera y metal",
+      "price": 3000.0,
+      "stepsOfFabrication": {
+        "COMPRAR_MATERIALES": 1,
+        "INSPECCION_DE_CALIDAD_MATERIALES": 2,
+        "CORTAR": 3,
+        "TALLAR": 4,
+        "LIJADO": 5,
+        "PINTAR": 6,
+        "BARNIZADO": 7,
+        "SECADO": 8,
+        "ENSAMBLAJE_DE_COMPONENTES": 9,
+        "INSTALACION_DE_TECLAS": 10,
+        "AFINACION": 11,
+        "PRUEBAS_DE_SONIDO": 12,
+        "EMPAQUETADO_Y_ETIQUETADO": 13
+      }
+    },
+    {
+      "id": 4,
+      "name": "Flauta dulce",
+      "material": "Plástico",
+      "price": 50.0,
+      "stepsOfFabrication": {
+        "COMPRAR_MATERIALES": 1,
+        "INSPECCION_DE_CALIDAD_MATERIALES": 2,
+        "MOLDEAR_FORMA": 3,
         "LIJADO": 4,
-        "PINTURA": 1,
-        "AFINACION": 2,
-        "PRUEBAS_DE_SONIDO": 2,
-        "EMPAQUETADO": 1
+        "PULIDO": 5,
+        "ENSAMBLAJE_DE_COMPONENTES": 6,
+        "AFINACION": 7,
+        "PRUEBAS_DE_SONIDO": 8,
+        "EMPAQUETADO_Y_ETIQUETADO": 9
+      }
+    },
+    {
+      "id": 5,
+      "name": "Órgano",
+      "material": "Metal y plástico",
+      "price": 500.0,
+      "stepsOfFabrication": {
+        "COMPRAR_MATERIALES": 1,
+        "INSPECCION_DE_CALIDAD_MATERIALES": 2,
+        "CORTAR": 3,
+        "SOLDAR_PIEZAS_METALICAS": 4,
+        "MONTAJE_DE_PIEZAS_ELECTRONICAS": 5,
+        "ENSAMBLAJE_DE_COMPONENTES": 6,
+        "INSTALACION_DE_TECLAS": 7,
+        "AFINACION": 8,
+        "PRUEBAS_DE_FUNCIONAMIENTO_ELECTRICO": 9,
+        "PRUEBAS_DE_FUNCIONAMIENTO_MECANICO": 10,
+        "EMPAQUETADO_Y_ETIQUETADO": 11
+      }
+    },
+    {
+      "id": 6,
+      "name": "Bajo",
+      "material": "Madera y metal",
+      "price": 350.0,
+      "stepsOfFabrication": {
+        "COMPRAR_MATERIALES": 1,
+        "INSPECCION_DE_CALIDAD_MATERIALES": 2,
+        "CORTAR": 3,
+        "TALLAR": 4,
+        "LIJADO": 5,
+        "PINTAR": 6,
+        "BARNIZADO": 7,
+        "SECADO": 8,
+        "ENSAMBLAJE_DE_COMPONENTES": 9,
+        "INSTALACION_DE_CUERDAS": 10,
+        "AFINACION": 11,
+        "PRUEBAS_DE_SONIDO": 12,
+        "EMPAQUETADO_Y_ETIQUETADO": 13
+      }
+    },
+    {
+      "id": 7,
+      "name": "Arpa",
+      "material": "Madera",
+      "price": 1500.0,
+      "stepsOfFabrication": {
+        "COMPRAR_MATERIALES": 1,
+        "INSPECCION_DE_CALIDAD_MATERIALES": 2,
+        "CORTAR": 3,
+        "TALLAR": 4,
+        "LIJADO": 5,
+        "PULIDO": 6,
+        "PINTAR": 7,
+        "BARNIZADO": 8,
+        "SECADO": 9,
+        "ENSAMBLAJE_DE_COMPONENTES": 10,
+        "INSTALACION_DE_CUERDAS": 11,
+        "AFINACION": 12,
+        "PRUEBAS_DE_SONIDO": 13,
+        "EMPAQUETADO_Y_ETIQUETADO": 14
       }
     }
+
   ]
 }

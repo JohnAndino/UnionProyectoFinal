@@ -48,12 +48,11 @@ public class CrearNuevo extends JFrame {
         setPreferredSize(new Dimension(1400, 800));
         setUndecorated(true);
 
-        // Create a custom title bar
         titleBar = new JPanel();
         titleBar.setBackground(Color.BLACK);
         titleBar.setLayout(new BorderLayout());
 
-        JLabel titleLabel = new JLabel("Crear Cuenta");
+        JLabel titleLabel = new JLabel("");
         titleLabel.setForeground(Color.WHITE);
         titleBar.add(titleLabel, BorderLayout.WEST);
 
@@ -125,7 +124,6 @@ public class CrearNuevo extends JFrame {
         gbc.insets = new Insets(10, 10, 10, 10);
         gbc.fill = GridBagConstraints.HORIZONTAL;
 
-        // Title label
         jLabel1.setFont(new Font("TIMES NEW ROMAN", Font.BOLD, 36));
         jLabel1.setHorizontalAlignment(SwingConstants.CENTER);
         jLabel1.setText("INGRESE:");
@@ -135,7 +133,6 @@ public class CrearNuevo extends JFrame {
         gbc.gridwidth = 2;
         mainPanel.add(jLabel1, gbc);
 
-        // Name label and text field
         jLabel2.setFont(new Font("TIMES NEW ROMAN", Font.BOLD, 18));
         jLabel2.setText("NOMBRE:");
         jLabel2.setForeground(Color.WHITE);
@@ -149,7 +146,6 @@ public class CrearNuevo extends JFrame {
         gbc.gridy = 1;
         mainPanel.add(jTextField1, gbc);
 
-        // Password label and text field
         jLabel3.setFont(new Font("TIMES NEW ROMAN", Font.BOLD, 18));
         jLabel3.setText("CONTRASEÑA:");
         jLabel3.setForeground(Color.WHITE);
@@ -162,7 +158,6 @@ public class CrearNuevo extends JFrame {
         gbc.gridy = 2;
         mainPanel.add(jTextField2, gbc);
 
-        // Buttons
         Border buttonBorder = BorderFactory.createLineBorder(new Color(246,195,67), 2);
 
         jButtonRegr.setFont(new Font("TIMES NEW ROMAN", Font.BOLD, 14));
@@ -189,26 +184,23 @@ public class CrearNuevo extends JFrame {
         jButtonCrear.setBorder(buttonBorder);
         jButtonCrear.setFocusPainted(false);
 
-        // Place jButtonCrear
         gbc.gridx = 0;
-        gbc.gridy = 3; // Adjusted gridy for "Crear" button
-        gbc.gridwidth = 2; // Span across both columns
+        gbc.gridy = 3;
+        gbc.gridwidth = 2;
         gbc.weightx = 0;
         gbc.weighty = 0;
         gbc.fill = GridBagConstraints.NONE;
         mainPanel.add(jButtonCrear, gbc);
 
-        // Place jButtonRegr below jButtonCrear
-        gbc.gridy = 4; // New row for "Regresar" button
+
+        gbc.gridy = 4;
         mainPanel.add(jButtonRegr, gbc);
 
-        // Add the title bar and main panel to the frame
         add(titleBar, BorderLayout.NORTH);
         add(mainPanel, BorderLayout.CENTER);
         pack();
-        setLocationRelativeTo(null); // Center the frame
+        setLocationRelativeTo(null);
 
-        // Set the JFrame background color to black
         getContentPane().setBackground(Color.BLACK);
     }
 }

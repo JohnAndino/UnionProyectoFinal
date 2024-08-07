@@ -47,15 +47,6 @@ public class Cliente {
         this.password = password;
     }
 
-
-    @Override
-    public String toString() {
-        return "Cliente{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", password='" + password + '\'' +
-                '}';
-    }
 }
 
 

@@ -1,33 +1,28 @@
 package ec.edu.uce.FabricaMusical.controller;
 
-import ec.edu.uce.FabricaMusical.models.Cliente;
 import ec.edu.uce.FabricaMusical.models.Product;
-import ec.edu.uce.FabricaMusical.models.implementacion.ClienteImp;
+import ec.edu.uce.FabricaMusical.models.ProductConfig;
 import ec.edu.uce.FabricaMusical.models.interfaces.Notify;
 import ec.edu.uce.FabricaMusical.models.enums.Steps;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class Container {
+//@Component
+public class Contain {
     private List<Product> products;
     private Notify notificationService;
+    private ProductConfig productConfig;
 
-    @Autowired
-    ClienteImp clienteImp;
-
-    public void registrarCliente(String name, String password) {
-        Cliente cliente = new Cliente();
-        cliente.setName(name);
-        cliente.setPassword(password);
-        clienteImp.saveCliente(cliente);
-    }
-
-    public Container(Notify notificationService) {
+    //@Autowired
+    public Contain(Notify notificationService, String configFilePath) throws IOException {
+        this.productConfig = new ProductConfig(configFilePath);
         this.products = new ArrayList<>();
         this.notificationService = notificationService;
     }
@@ -71,7 +66,15 @@ public class Container {
         }
     }
 
-
+    public void createProducts() {
+        for (ProductConfig.ProductData data : productConfig.getProducts()) {
+            Product product = new Product(Math.toIntExact(data.getId()), data.getName(), data.getMaterial(), data.getPrice());
+            for (Map.Entry<Steps, Integer> entry : data.getStepsOfFabrication().entrySet()) {
+                product.addStepsOfFabrication(entry.getKey(), entry.getValue());
+            }
+            addProduct(product);
+        }
+    }
 
     public List<Product> getProducts() {
         return products;
